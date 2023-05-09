@@ -4,24 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My layout</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <title>My Layout</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+
+    <script src="./js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <script>
+
+        //atrelando um evento click à um elemento no HTML.
+        // const h2Element = document.getElementById("titulo");
+        // console.log(h2Element.textContent);;
+
+
+    </script>
 </head>
-
-<script>
-//comentário de linha
-var nr1 = 10;
-var nr2 = 4;
-
-console.log(nr1 + nr2);
-
-
-</script>
 
 <body>
     
+    <!--CABEÇALHO-->
+    
     <header class="cabecalho">
-        <img src="./img/logo.png" alt="logo">
+        <img src="./img/logo.png" alt="Monitor de computador">
         <nav>
             <a href="#">Item-1</a>
             <a href="#">Item-2</a>
@@ -29,72 +32,79 @@ console.log(nr1 + nr2);
         </nav>
     </header>
 
-    <h2 class="tit-sec"> Seção de fotos</h2>
+    <h2 id="titulo" class="tit-sec">Seção de Fotos</h2>
 
+    <!--CABEÇALHO-->
+
+    <!--CONTEÚDO-->
     <section class="conteudo">
-
         <div>
-            <img src="./img/lobo1.jpg" alt="lobo">
-            <p>legenda</p>
+            <img src="./img/lobo1.jpg" alt="Lobo">
+            <p>Legenda</p>
         </div>
-
         <div>
-            <img src="./img/lobo2.jpg" alt="lobo">
-            <p>legenda</p>
+            <img src="./img/lobo2.jpg" alt="Lobo">
+            <p>Legenda</p>
         </div>
-
         <div>
-            <img src="./img/lobo3.jpg" alt="lobo">
-            <p>legenda</p>
+            <img src="./img/lobo3.jpg" alt="Lobo">
+            <p>Legenda</p>
         </div>
-
         <div>
-            <img src="./img/lobo4.jpg" alt="lobo">
-            <p>legenda</p>
+            <img src="./img/lobo4.jpg" alt="Lobo">
+            <p>Legenda</p>
         </div>
-
         <div>
-            <img src="./img/lobo5.jpg" alt="lobo">
-            <p>legenda</p>
+            <img src="./img/lobo5.jpg" alt="Lobo">
+            <p>Legenda</p>
         </div>
-
         <div>
-            <img src="./img/lobo6.jpg" alt="lobo">
-            <p>legenda</p>
+            <img src="./img/lobo6.jpg" alt="Lobo">
+            <p>Legenda.</p>
         </div>
-        
-    
     </section>
+    <!--CONTEÚDO-->
 
+    <!--RODAPÉ-->
     <footer class="rodape">
-        <h2> fale conosco</h2>
-        <div>
-            <form action="" method="get" onsubmit="return false">
-                <fieldset>
-                    <legend>Contato</legend>
-                    <div>
-                        <label for="idEmail">Email</label>
-                        <input type="email" name="txtEmail" id="idEmail" required placeholder="Email">
-                    </div>
-                    <div>
-                        <label for="idNome">Nome</label>
-                        <input type="text" name="txtnome" id="idNome" required placeholder="Nome">
-                    </div>
-                    <div>
-                        <input type="submit" value="Enviar">
-                    </div>
-                </fieldset>
-            </form>
-        </div>
+        <h2>Fale Conosco.</h2>
+        <form action="index.html" method="GET" onsubmit="return false">
+            <fieldset>
+                <legend>Entrar</legend>
+                <div>
+                    <label for="idEmail">Email</label>
+                    <input type="email" name="txtEmail" id="idEmail" placeholder="Email">
+                </div>
+
+                <div>
+                    <label for="idSenha">Senha</label>
+                    <input type="password" name="txtSenha" id="idSenha" placeholder="Senha">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </div>
+
+                <div>
+                    <label for="idGrava">Guardar Dados</label>
+                    <input type="checkbox" name="txtGrava" id="idGrava" >
+                </div>
+
+                <div>
+                    <button type="submit" id="btnSubmit">Entrar</button>
+                </div>
+
+            </fieldset>
+        </form>
+
+
         <nav>
-        <a href="#"><img src="./img/social-1.png" alt="Github">Github</a>
-        <a href="#"><img src="./img/social-2.png" alt="">Facebook</a>
-        <a href="#"><img src="./img/social-3.png" alt="Twitter">Twitter</a>
-        
-    
+            <a href="#"><img src="./img/social-1.png" alt="Logo github"></a>
+            <a href="#"><img src="./img/social-2.png" alt="Facebook"></a>
+            <a href="#"><img src="./img/social-3.png" alt="Twitter"></a>
+        </nav>
+
+
+
     </footer>
-
-
+    <!-- rodape -->
 </body>
 
 </html>
