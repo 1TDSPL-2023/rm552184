@@ -120,50 +120,56 @@
 // });
 
 //converter HTMLelemnts em array
-//const aElements = document.getElementsByTagName("a");
-//const aElementsArray = [...aElements];
-//console.log(aElementsArray);
-//imprimindo aatributos dos elementos recuperados...
-//aElementsArray.forEach((a)=>{
-  //  console.log(a.href);
-//});
-
-// const imgElements = [...document.querySelectorAll(".conteudo img")];
-// imgElements.forEach((img)=>{
-//     img.setAttribute("style" , "width: 35%")
-
+// const aElements = document.getElementsByTagName("a");
+// const aElementsArray = [...aElements];
+// console.log(aElementsArray);
+// //imprimindo aatributos dos elementos recuperados...
+// aElementsArray.forEach((a)=>{
+//     console.log(a.href);
 // });
 
-const inputUser = document.querySelector("input[type='email']");
+const imgElements = [...document.querySelectorAll(".conteudo img")];
+
+imgElements.forEach((img)=>{
+    img.setAttribute("style" , "width: 20%")
+});
+
+
+const inputUser = document.querySelector("input[type = 'email']");
 
 inputUser.addEventListener("focus", ()=>{
-    inputUser.setAttribute("style", "outline-color:#ff0000")
+    inputUser.setAttribute("style", "outline-color: #ff0000")
 });
 
 inputUser.addEventListener("keyup", ()=>{
-    const idEmail = document.querySelector("label['for= idEmail']");
-    if (inputUser.value.length > 5){
-        idEmail.innerHTML = "<span style: 'color=#ff0000' >Email:(Mínimo de 5 caracteristicas)</span>";
+    const lbUser = document.querySelector("label[for='idEmail']")
+    if(inputUser.value.length < 5 ){
+        lbUser.innerHTML = "<span style= 'color : #FF0000'> Email : (mínimo de 5 caracteres)</span>";
+
         console.log(inputUser.value);
-        inputUser.setAttribute("style", "outline-color:#ff0000")
+        inputUser.setAttribute("style", "outline-color: #ff0000");
     }
     else{
         console.log(inputUser.value.length)
-        idEmail.innerHTML = "<span style: 'color:#00ff00' >Email:</span>";
-        inputUser.setAttribute("style", "outline-color: #00ff00")
+        lbUser.innerHTML = "<span style =  'color : #00FF00'>Email</span>";
+        inputUser.setAttribute("style" , "outline-color: #00ff00")
     }
+    
 });
 
-//mostrar a senha 
+//mostrar senha
+
 const eyePass = document.querySelector(".fa-eye");
 
 eyePass.addEventListener("click", ()=>{
-    const inputPass = document.querySelector("#idPass");
+    const inputPass = document.querySelector("#idSenha");
 
-//alerar o type
+    //Alterar o type
     if(inputPass.getAttribute("type") == "password"){
-        inputPass.setAttribute("type" , "text");    
+        inputPass.setAttribute("type" , "text")
+        eyePass.setAttribute("class", "fa fa-eye-slash" );
     }else{
-        inputPass.setAttribute
+        eyePass.setAttribute("class", "fa fa-eye" );
+        inputPass.setAttribute("type", "password");
     }
 });

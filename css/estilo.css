@@ -1,7 +1,7 @@
 @import url("./cabecalho.css");
 @import url("./conteudo.css");
 @import url("./bkpt-630px.css");
-@import url(./rodape.css);
+@import url("./rodape.css");
 
 *{
     margin:0;
@@ -16,32 +16,7 @@ html{
     text-align: center;
     font-size: 3em;
 }
-.rodape{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #d9d9d9;
-}
-.rodape nav{
-    display: flex;
-    margin-top:4.5%;
-    justify-content: space-around;
-    width: 100%;
-}
-.rodape nav img{
-    max-width: 10%;
-    display: block;
-    margin: 0 auto;
-}
-.rodape nav a{
-    padding: 5% 0;
-    width: 100%;
-}
-.rodape nav a :hover{
-    background-color: #151313bb;
-    padding: 100%;
-}
+
 table{
     /*border-collapse: ;*/
     /*border-spacing: 1px;*/
